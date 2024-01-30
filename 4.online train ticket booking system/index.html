@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Train Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Online Train Ticket Booking</h1>
+    </header>
+
+    <section id="bookingFormSection">
+        <form id="bookingForm">
+            <label for="fromStation">From Station:</label>
+            <input type="text" id="fromStation" name="fromStation" required>
+
+            <label for="toStation">To Station:</label>
+            <input type="text" id="toStation" name="toStation" required>
+
+            <label for="travelDate">Travel Date:</label>
+            <input type="date" id="travelDate" name="travelDate" required>
+
+            <label for="passengerCount">Number of Passengers:</label>
+            <input type="number" id="passengerCount" name="passengerCount" min="1" required>
+
+            <button type="button" onclick="submitBooking()">Book Now</button>
+        </form>
+    </section>
+
+    <section id="bookingSummarySection" style="display: none;">
+        <h2>Booking Summary</h2>
+        <p><strong>From Station:</strong> <span id="summaryFromStation"></span></p>
+        <p><strong>To Station:</strong> <span id="summaryToStation"></span></p>
+        <p><strong>Travel Date:</strong> <span id="summaryTravelDate"></span></p>
+        <p><strong>Passenger Count:</strong> <span id="summaryPassengerCount"></span></p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
